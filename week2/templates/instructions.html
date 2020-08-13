@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Webpage</title>
+</head>
+<body>
+	<h1> {{headline}} </h1> <!-- gets headline from python -->
+
+	<form action=" {{ url_for('hello') }}" method="post">
+		<input type="text" name="name" placeholder="Enter Your Name">
+		<button> submit </button>
+	</form>
+
+		
+	<!-- wack ass coding system for new year checker
+
+	if statement: 
+		{% if new_year %}
+			<h1> Yes! Happy New Year </h1>
+		{% else %}
+			<h1> NO </h1>
+		{% endif %}
+
+	for loop:	
+		<ul>
+		{% for name in names %}
+			<li> {{name }} </li>
+		{% endfor %}
+		</ul>
+
+	callback to a new route:
+		<a href="{{url_for("main")}}">Link </a>
+
+	template inheritance:
+		{% extends "hello.html" %} //everything will inherit stuff from layout.html
+
+		{% block heading %} {% endblock %}
+		{% block body %} {% endblock %}
+		}
+-->
+</body>
+</html>

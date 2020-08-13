@@ -1,0 +1,46 @@
+/* attribute */
+input[type=text] {
+	background-color: red;
+}
+
+/* I want to apply this before the contents of the actual link */
+a::before {
+	content: "\21d2 Click here: ";
+	font-weight: bold;
+}
+
+a::after{
+	content: "THIS COMES AFTER";
+}
+
+/* WHEN SOMETHING IS SELECTED */
+p::selection {
+	color: red;
+	background-color: yellow;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+	body {
+		background-color: white;
+	}
+}
+
+@media (max-width: 699px) {
+	body {
+		background-color: yellow;
+	}
+}
+
+/*example of flexbox */
+.container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box {
+	background-color: springgreen;
+	margin: 20px;
+	padding: 20px;
+	width: 200px;
+}

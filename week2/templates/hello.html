@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 style="color: red"> Comment Page</h1>
+	<ul>
+	{% for name in data %}
+		<li> {{name }} </li>
+	{% endfor %}
+	</ul>
+
+	<form action="hello" method="post">
+		<input type="text" name="name" placeholder="Enter Your Name">
+		<button> submit </button>
+	</form>
+
+
+</body>
+</html>
