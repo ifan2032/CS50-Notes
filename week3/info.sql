@@ -27,7 +27,7 @@ SELECT MIN(duration) FROM flights;
 SELECT * FROM flights WHERE origin LIKE '%a%'; #selects stuff with a in the origin string
 SELECT * FROM flights ORDER BY duration ASC; #sorts
 SELECT origin, COUNT(*) FROM flights GROUP BY origin HAVING COUNT(*) > 1; #Having is like Where for group by
-
+SELECT * FROM flights WHERE id IN (SELECT flight_id FROM passengers GROUP BY flight_id HAVING COUNT(*) > 1); 
 #UPDATE 
 UPDATE flights
 	SET duration = 430
@@ -46,6 +46,24 @@ SELECT origin, destination, name FROM flights JOIN passengers on
 #left join (stuff is included even if there is no match)
 SELECT origin, destination, name FROM flights LEFT JOIN passengers on
 	passengers.flight_id = flights.id;
+
+
+
+#LOGGING IN
+SELECT * FROM users WHERE (username = 'alice') AND (password = '12345');
+
+#sql infection Oh! No!
+SELECT * FROM users WHERE (username="hacker") AND (password='1' OR '1' = '1'); #user input 1' OR '1'='1 as password
+#race conditions: two people withdrawing money from same account at the same time
+
+
+
+
+
+
+
+
+
 
 
 
