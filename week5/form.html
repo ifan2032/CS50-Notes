@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		//Two ways to submit a forms
+		document.addEventListener('DOMContentLoaded', function() {
+			document.querySelector('#form').onsubmit = function() {
+				const name = document.querySelector('#name').value;
+				alert(`Hello ${name}`);
+			};
+			document.querySelector('button').onclick = function() {
+				const age = document.querySelector('#age').value;
+				alert(`You are ${age} years old`);
+			};
+			document.querySelector('#color').onclick = function() {
+				document.querySelector('body').style.background = "red";
+			}
+			//intead of writing 3 functions we can just write:
+			/*
+				1. selects all elements with color change class
+				2. run through each function that sets onclick to change for dataset.color
+
+			*/
+			document.querySelectorAll('.color-change').forEach(function(button) {
+				button.onclick = function() {
+					document.querySelector('#change').style.color = button.dataset.color;
+				}
+			})
+		});
+
+
+
+	</script>
+	<form id="form">
+		<input type="text" id="name" autofocus placeholder="Leon Fan">
+		<input type="submit">
+	</form>
+
+	<form id="form">
+		<input type="text" id="age" placeholder="15 Years Old">
+		<button> submit </button>
+	</form>
+	<button id="color"> Click Me </button>
+	<h1 id="change">This color will Change </h1>
+	<button class="color-change" data-color="red">Red</button>
+	<button class="color-change" data-color="blue">Blue</button>
+	<button class="color-change" data-color="green">Green</button>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<!--   <script src="blah blah blah"> </script> -->
+
+<h1>HELLO</h1>
+<h2 id="counter"> 0 </h2>
+<button onclick="hello()"> Calls Hello Function </button> 
+<button onclick="change()"> Changes H1 Heading </button>
+<button id="button"> Add me </button>
+<!-- 
+Events
+	*onclick
+	*onmousehover
+	*onkeydown
+	*onkeyup
+	*onload
+	*onblur (when an object loses focuss)
+-->
+<script>
+
+	/*
+	let counter = 0;
+
+	function add() {
+		counter++;
+		document.querySelector('#counter').innerHTML = counter;
+
+		if (counter % 10 == 0) {
+			alert(`Counter is at ${counter}!`); //formatted string in Javascript
+		}
+	}
+	*/
+
+	
+	document.addEventListener('DOMContentLoaded', function() {
+		document.querySelector('#button').onclick = count; //runs function when loaded
+	});
+
+	let counter = 0;
+
+	function count() {
+		counter++;
+		document.querySelector('#counter').innerHTML = counter;
+
+		if (counter % 10 == 0) {
+			alert("You have hit 10");
+		}
+	}
+
+	function change() {
+		//innerHTML --> gets what is contained
+		//querySelector selects first thing
+		//document.querySelect('tag' OR '#id' OR '.class')
+		document.querySelector('h1').innerHTML = 'Goodbye!';
+	}
+	//function to say hello, event
+	function hello() {
+		alert('Hello!');
+	}	
+</script>
+</body>
+</html>
