@@ -29,8 +29,20 @@
 					document.querySelector('#change').style.color = button.dataset.color;
 				}
 			})
+
 		});
 
+		/* This also works to change the color of the text
+
+		document.addEventListener('DOMContentLoaded', () => {
+			document.querySelectorAll('.color-change').forEach(button => {
+				button.onclick = () => {
+					document.querySelector("#hello").style.color = buton.dataset.color
+				}
+			});
+		});
+
+		*/
 
 
 	</script>
