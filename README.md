@@ -80,4 +80,7 @@ db.init_app(app)
 
 ## Week 5 - Javascript
 
-* 
+
+## Week 6 - Front End tricks
+
+* Instagram Model -- how to load more posts when you scroll to the bottom of the page
