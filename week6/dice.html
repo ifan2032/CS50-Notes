@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script>
+
+	document.addEventListener('DOMContentLoaded', () => {
+		document.querySelector("#roll").onclick = () => {
+			console.log("HI");
+			const roll = Math.floor((Math.random() * 6) + 1);
+
+			const content = document.createElement('div');
+			content.innerHTML = `You rolled a ${roll}`;
+
+			document.querySelector("#rolls").append(content);
+
+			//if you want to put an image: <img src=\"img/{{value}}.png\">
+		};
+	});
+
+	</script>
+</head>
+<body>
+	<button id="roll"> Roll </button>
+
+	<div id="rolls">
+
+	</div>
+</body>
+</html>

@@ -80,7 +80,61 @@ db.init_app(app)
 
 ## Week 5 - Javascript
 
+* How to use document.querySelector, document.addEventListener
+* Arrow Functions
+
 
 ## Week 6 - Front End tricks
 
 * Instagram Model -- how to load more posts when you scroll to the bottom of the page
+* Ajax Requests
+
+## Week 7 - Django
+
+* __init__.py => python package
+* manage.py =>
+* settings.py => settings for our web application (time zone, database type, etc...)
+* urls.py => determines what routes user can go to
+* wsgi.py => helps deploy our web application to a web server
+* project_name/ => our project directory
+* See hello for example
+
+To create a project:
+
+```
+django-admin startproject project
+```
+
+To create an app (inside directory):
+
+```
+python manage.py startapp hello
+```
+
+To run:
+
+```
+python manage.py runserer
+```
+
+Create database
+
+```
+python manage.py makemigrations
+
+python manage.py migrate
+```
+
+View SQL code:
+```
+python manage.py sqlmigrate app_name 0001
+```
+
+Django shell
+```
+python manage.py shell
+
+from app_name.models import app_name
+f = app_name(destination="blah", origin="blah")
+f.save()
+```
