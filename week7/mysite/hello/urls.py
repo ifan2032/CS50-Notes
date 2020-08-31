@@ -3,5 +3,6 @@ from . import views
 
 #list of urls supported by app
 urlpatterns = [
-	path("", views.index)
+	path("", views.index),
+	path("main", views.main)
 ]

@@ -138,3 +138,8 @@ from app_name.models import app_name
 f = app_name(destination="blah", origin="blah")
 f.save()
 ```
+
+For users table
+```
+python manage.py createsuperuser
+```
